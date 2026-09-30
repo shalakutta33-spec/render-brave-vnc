@@ -1,3 +1,9 @@
 FROM accetto/ubuntu-vnc-xfce-brave-g3:latest
+
 USER root
-EXPOSE 6901
+
+ENV NOVNC_PORT=10000
+
+EXPOSE 10000
+
+ENTRYPOINT ["/usr/bin/tini", "--", "/dockerstartup/startup.sh"]
