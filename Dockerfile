@@ -5,5 +5,3 @@ USER root
 ENV NOVNC_PORT=10000
 
 EXPOSE 10000
-
-ENTRYPOINT ["/usr/bin/tini", "--", "/dockerstartup/startup.sh"]
