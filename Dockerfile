@@ -10,3 +10,4 @@ RUN mkdir -p /data /tmp/tigervnc && chmod 777 /data /tmp/tigervnc && \
     rm -f /dockerstartup/vnc.log /dockerstartup/novnc.log && \
     ln -s /tmp/vnc.log /dockerstartup/vnc.log && \
     ln -s /tmp/novnc.log /dockerstartup/novnc.log
+CMD ["--verbose", "--tail-vnc"]
